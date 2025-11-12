@@ -136,82 +136,6 @@ CrowdCount-Website/
 
 ---
 
-## 🚀 Installation & Setup
-
-### ✅ Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Text editor (VS Code, Sublime Text, etc.) - for local editing
-- Git (optional) - for version control
-
-### 📥 Local Setup
-
-#### Option 1: Direct File Access
-1. **Download** the website files to your computer
-2. **Open** `index.html` in your web browser
-3. **Done!** The website works locally without any server
-
-#### Option 2: Using a Local Server (Recommended)
-
-**Using Python:**
-```bash
-# Python 3.x
-python -m http.server 8000
-
-# Then open http://localhost:8000 in your browser
-```
-
-**Using Node.js:**
-```bash
-# Install http-server globally
-npm install -g http-server
-
-# Run from project directory
-http-server
-
-# Then open the provided localhost URL in your browser
-```
-
-**Using VS Code Live Server Extension:**
-1. Install "Live Server" extension in VS Code
-2. Right-click on `index.html`
-3. Select "Open with Live Server"
-
----
-
-## 🌍 Deployment
-
-### Deploy on GitHub Pages (Free)
-
-1. **Create a new GitHub repository** named `CrowdCount-Website`
-2. **Upload files** (index.html, styles.css, script.js)
-3. **Go to repository Settings** → Pages
-4. **Set source** to `main` branch and `/root` folder
-5. **Visit** `https://yourusername.github.io/CrowdCount-Website`
-
-### Deploy on Netlify (Recommended)
-
-1. **Create a Netlify account** at [netlify.com](https://netlify.com)
-2. **Connect your GitHub repository**
-3. **Netlify automatically deploys** on every push
-4. **Share the live URL** (e.g., `crowdcount-website.netlify.app`)
-
-### Deploy on Vercel
-
-1. **Create a Vercel account** at [vercel.com](https://vercel.com)
-2. **Import your GitHub repository**
-3. **Vercel deploys automatically**
-4. **Access via provided URL**
-
-### Deploy on AWS S3 (Static Hosting)
-
-1. **Create an S3 bucket** with static website hosting enabled
-2. **Upload** index.html, styles.css, script.js
-3. **Configure bucket for public access**
-4. **Access via S3 website endpoint**
-
----
-
 ## 💡 Usage
 
 ### 🖱️ Navigation
@@ -273,39 +197,7 @@ http-server
 
 ---
 
-## 🔧 Customization
 
-### Changing Colors
-
-Edit the CSS variables in `styles.css`:
-
-```css
-:root {
-  --primary-color: #7C3AED;      /* Change primary violet */
-  --secondary-color: #8B5CF6;    /* Change secondary violet */
-  --text-color: #1F2937;         /* Change text color */
-  --background-color: #FFFFFF;   /* Change background */
-}
-```
-
-### Updating Content
-
-Simply edit the HTML sections in `index.html`:
-
-```html
-<!-- Update project name, description, links -->
-<h1>Your New Title</h1>
-<p>Your new description</p>
-```
-
-### Adding Sections
-
-1. **Copy an existing section** from `index.html`
-2. **Modify the content** as needed
-3. **Update the navigation** to link to new section
-4. **Style with existing CSS classes**
-
----
 
 ## 📚 Related Projects
 
