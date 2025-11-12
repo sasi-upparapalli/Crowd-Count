@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdCount - Smart Vision-Based Crowd Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🎓</span>
+                <span class="brand-name">CrowdCount</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+                <li><a href="#setup" class="nav-link">Setup</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Infosys Certified Final Project – 2025</div>
+            <h1 class="hero-title">CrowdCount: People Counting Using Video Analytics</h1>
+            <p class="hero-subtitle">A Smart Vision-Based System for Real-Time Crowd Monitoring</p>
+            <p class="hero-tagline">Detect. Track. Count. Monitor.</p>
+            <div class="hero-buttons">
+                <a href="#overview" class="btn btn-primary">Explore Project</a>
+                <a href="#setup" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/46e7cc32-5d70-4857-a43d-c4d562f455f7.png" alt="CrowdCount System" />
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section overview-section">
+        <div class="container">
+            <h2 class="section-title">🧠 Project Overview</h2>
+            <div class="overview-content">
+                <p class="overview-description">
+                    CrowdCount is a real-time AI-powered crowd analytics system designed to detect, track, and count people across multiple surveillance zones using computer vision. It enables administrators and security operators to monitor crowd density, set zone thresholds, and get instant alerts when thresholds are exceeded — all through an elegant Flask-based web dashboard.
+                </p>
+                <div class="overview-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🎯</div>
+                        <h3>Precision Tracking</h3>
+                        <p>Over 90% accuracy using YOLOv8 and Deep SORT algorithms</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">⚡</div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Live streaming and instant analytics from multiple camera feeds</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🛡️</div>
+                        <h3>Secure &amp; Scalable</h3>
+                        <p>Role-based access control with comprehensive activity logging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <h2 class="section-title">🚀 Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎥</div>
+                    <h3>Live Camera Streaming</h3>
+                    <p>Stream from webcam or connected IP cameras in real time</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Smart Zone Drawing</h3>
+                    <p>Define custom regions of interest (ROI) directly on the live or uploaded video feed</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧍</div>
+                    <h3>Accurate People Tracking</h3>
+                    <p>Uses YOLOv8 + Deep SORT-based tracking with over 90% accuracy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Zone-Based Counting</h3>
+                    <p>Dynamically counts unique individuals per defined zone</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Interactive Dashboard</h3>
+                    <p>Displays real-time stats, live heatmaps, and alerts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Role-Based Access</h3>
+                    <p>Secure admin and user panels with Flask session management</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗂️</div>
+                    <h3>Export &amp; Reports</h3>
+                    <p>Export system logs, activity data, and camera reports in CSV/PDF format</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Alerts &amp; Thresholds</h3>
+                    <p>Instant notifications when zone capacity limits are exceeded</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧾</div>
+                    <h3>Comprehensive Logs</h3>
+                    <p>Tracks every admin/user action for audit and compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="section tech-stack-section">
+        <div class="container">
+            <h2 class="section-title">⚙️ Technology Stack</h2>
+            <div class="tech-table-wrapper">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Layer</th>
+                            <th>Technology</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>HTML5, CSS3 (Custom Theme), JavaScript (Canvas + Chart.js)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend</strong></td>
+                            <td>Flask (Python 3.x)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Database</strong></td>
+                            <td>SQLite3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ML/AI Engine</strong></td>
+                            <td>YOLOv8 (Ultralytics) + Deep SORT for tracking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Visualization</strong></td>
+                            <td>Chart.js (live line &amp; bubble charts)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Authentication</strong></td>
+                            <td>JWT-based sessions, Flask-login</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Exports</strong></td>
+                            <td>CSV, FPDF</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deployment</strong></td>
+                            <td>Render / Local Flask Server</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="section technologies-section">
+        <div class="container">
+            <h2 class="section-title">🧩 Technologies &amp; Modules Used</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Flask</h3>
+                    <p>Backend web framework for handling routes, templates, and APIs</p>
+                </div>
+                <div class="tech-card">
+                    <h3>SQLite3</h3>
+                    <p>Lightweight database for storing users, zones, logs, and camera info</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Werkzeug Security</h3>
+                    <p>Password hashing (generate_password_hash, check_password_hash) for secure login</p>
+                </div>
+                <div class="tech-card">
+                    <h3>JWT (PyJWT)</h3>
+                    <p>To generate JSON Web Tokens for session security</p>
+                </div>
+                <div class="tech-card">
+                    <h3>OS, Datetime, Time, IO, CSV</h3>
+                    <p>For file management, timestamping logs, and exporting CSV reports</p>
+                </div>
+                <div class="tech-card">
+                    <h3>OpenCV (cv2)</h3>
+                    <p>To handle video input, frame processing, and visualization</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Ultralytics YOLOv8</h3>
+                    <p>For person detection using pre-trained deep learning models</p>
+                </div>
+                <div class="tech-card">
+                    <h3>DeepSORT</h3>
+                    <p>For object tracking across frames, assigning consistent IDs to objects</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Threading</h3>
+                    <p>For running video capture and tracking asynchronously without freezing the Flask app</p>
+                </div>
+                <div class="tech-card">
+                    <h3>ReportLab</h3>
+                    <p>For generating PDF exports of logs directly from the backend</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Jinja2 Templates</h3>
+                    <p>HTML rendering for dashboard, admin panel, etc</p>
+                </div>
+                <div class="tech-card">
+                    <h3>JWT (JSON Web Token)</h3>
+                    <p>Secure authentication across user sessions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Functional Breakdown Section -->
+    <section class="section functional-section">
+        <div class="container">
+            <h2 class="section-title">🧱 Functional Breakdown</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="db-init">
+                        <span>Database Initialization &amp; Configuration</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="db-init">
+                        <div class="function-list">
+                            <div class="function-item">
+                                <code>init_db()</code>
+                                <p>Creates all the necessary tables (users, zones, user_profiles, activity_logs, cameras, etc.). Ensures schema compatibility for future upgrades.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>allowed_file(filename)</code>
+                                <p>Validates uploaded video files based on allowed extensions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="logging">
+                        <span>Logging &amp; Admin Utilities</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="logging">
+                        <div class="function-list">
+                            <div class="function-item">
+                                <code>log_activity(...)</code>
+                                <p>Inserts an activity record into activity_logs with user actions and timestamps. Used for tracking everything.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>is_admin(user_id)</code>
+                                <p>Checks if a user has an admin role in the database.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>admin_required(f)</code>
+                                <p>Decorator that restricts certain routes to admin users only. If not admin, redirects to dashboard.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="tracking">
+                        <span>Tracking &amp; Streaming Routes</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="tracking">
+                        <div class="function-list">
+                            <div class="function-item">
+                                <code>/zm_start_tracking</code>
+                                <p>Starts YOLO+DeepSORT tracking for an uploaded video.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/zm_stop_tracking</code>
+                                <p>Stops the ongoing tracking thread.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/zm_feed</code>
+                                <p>Provides real-time MJPEG streaming output of the tracker.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/start_stream</code>
+                                <p>Starts live streaming from webcam/IP camera.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/video_feed</code>
+                                <p>Live video feed endpoint for dashboard.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/stats_stream</code>
+                                <p>Sends live JSON event updates (counts, thresholds) using SSE (Server-Sent Events).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="user-mgmt">
+                        <span>User Management</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="user-mgmt">
+                        <div class="function-list">
+                            <div class="function-item">
+                                <code>/register</code>
+                                <p>Handles new user registration with password hashing and logging.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/login</code>
+                                <p>Authenticates user and generates JWT token.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/logout</code>
+                                <p>Ends user session and logs logout activity.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/profile</code>
+                                <p>Lets user view and update personal profile info (dob, gender, etc.).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="admin-panel">
+                        <span>Admin Panel Routes</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content" id="admin-panel">
+                        <div class="function-list">
+                            <div class="function-item">
+                                <code>/admin</code>
+                                <p>Main admin dashboard showing overall system stats.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/admin/users</code>
+                                <p>Displays all users for management.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/admin/activity-log</code>
+                                <p>Paginated view of all activity logs.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/admin/export-logs/csv</code>
+                                <p>Exports full activity logs as CSV.</p>
+                            </div>
+                            <div class="function-item">
+                                <code>/admin/export-logs/pdf</code>
+                                <p>Exports activity logs as PDF using ReportLab.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Learning Flow Section -->
+    <section class="section dl-flow-section">
+        <div class="container">
+            <h2 class="section-title">🧠 Deep Learning Module Flow</h2>
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <h3>YOLOv8 Detection</h3>
+                    <p>YOLOv8 detects objects (only person class is used)</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <h3>DeepSORT Tracking</h3>
+                    <p>DeepSORT assigns consistent IDs to track movement over time</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <h3>Zone Analysis</h3>
+                    <p>Each object's center point is checked against user-defined zones</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <h3>Count Update</h3>
+                    <p>The count per zone is updated dynamically</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">5</div>
+                    <h3>Heatmap Visualization</h3>
+                    <p>A heatmap overlay visualizes frequently occupied areas</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">6</div>
+                    <h3>Stream Output</h3>
+                    <p>Frames are encoded to JPEG and streamed to browser clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="section security-section">
+        <div class="container">
+            <h2 class="section-title">🔐 Security &amp; Authorization Flow</h2>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">🔒</div>
+                    <h3>Passwords</h3>
+                    <p>Hashed using Werkzeug</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🎫</div>
+                    <h3>JWT Tokens</h3>
+                    <p>Generated on login, stored in DB</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">👤</div>
+                    <h3>Session Variables</h3>
+                    <p>Used for role-based access control</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🛡️</div>
+                    <h3>Admin Decorator</h3>
+                    <p>Restricts admin routes (@admin_required)</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">📝</div>
+                    <h3>Activity Logs</h3>
+                    <p>Every user/admin action is logged with IP address</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Structure Section -->
+    <section class="section database-section">
+        <div class="container">
+            <h2 class="section-title">🧾 Database Structure Summary</h2>
+            <div class="tech-table-wrapper">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Table Name</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>users</code></td>
+                            <td>Stores credentials, emails, roles, and JWTs</td>
+                        </tr>
+                        <tr>
+                            <td><code>zones</code></td>
+                            <td>Stores zone coordinates and labels per user/video</td>
+                        </tr>
+                        <tr>
+                            <td><code>user_profiles</code></td>
+                            <td>Additional user info (dob, gender, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><code>activity_logs</code></td>
+                            <td>Logs every action with timestamps and IPs</td>
+                        </tr>
+                        <tr>
+                            <td><code>cameras</code></td>
+                            <td>Stores camera sources and statuses</td>
+                        </tr>
+                        <tr>
+                            <td><code>zone_thresholds</code></td>
+                            <td>Defines alert thresholds for each zone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section id="setup" class="section setup-section">
+        <div class="container">
+            <h2 class="section-title">⚙️ Setup and Installation</h2>
+            <div class="setup-content">
+                <div class="setup-box">
+                    <h3>Prerequisites</h3>
+                    <ul class="prerequisites-list">
+                        <li>Python 3.9 or higher</li>
+                        <li>pip package manager</li>
+                        <li>Virtual environment (recommended)</li>
+                    </ul>
+                </div>
+                <div class="setup-box">
+                    <h3>Installation Steps</h3>
+                    <div class="code-block">
+                        <code>git clone https://github.com/yourusername/CrowdCount.git</code>
+                    </div>
+                    <div class="code-block">
+                        <code>cd CrowdCount_Project</code>
+                    </div>
+                    <div class="code-block">
+                        <code>python -m venv venv</code>
+                    </div>
+                    <div class="code-block">
+                        <code>source venv/bin/activate  # (Windows: venv\Scripts\activate)</code>
+                    </div>
+                    <div class="code-block">
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                    <div class="code-block">
+                        <code>python app.py</code>
+                    </div>
+                    <p class="setup-note">Visit 👉 <a href="http://127.0.0.1:5000" target="_blank">http://127.0.0.1:5000</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Structure Section -->
+    <section class="section structure-section">
+        <div class="container">
+            <h2 class="section-title">📂 Project Structure</h2>
+            <div class="structure-box">
+                <pre><code>CrowdCount_Project/
+│
+├── app.py                      # Flask main backend
+├── tracker_service.py          # Tracking and detection logic (YOLOv8)
+├── video_zone.db               # SQLite3 database
+│
+├── static/
+│   ├── css/style.css           # Frontend theme and layout
+│   ├── js/script.js            # Core frontend logic (zones, webcam, uploads)
+│   └── uploads/                # Uploaded media files
+│
+├── templates/
+│   ├── dashboard.html          # User dashboard
+│   ├── live.html               # Live analytics dashboard
+│   ├── admin_dashboard.html    # Admin dashboard overview
+│   ├── admin_users.html        # Manage users
+│   ├── admin_zones.html        # Manage zones
+│   ├── admin_cameras.html      # Manage cameras
+│   ├── admin_activity_log.html # Activity logs &amp; reports
+│   └── base.html
+│
+└── requirements.txt</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Enhancements Section -->
+    <section class="section future-section">
+        <div class="container">
+            <h2 class="section-title">🤖 Future Enhancements</h2>
+            <div class="future-grid">
+                <div class="future-card">
+                    <div class="future-icon">🤖</div>
+                    <h3>Deep Learning on Edge Devices</h3>
+                    <p>Optimize YOLO for Jetson Nano / Raspberry Pi</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">🕵️</div>
+                    <h3>Anomaly Detection</h3>
+                    <p>Identify unusual crowd movements or density patterns</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">📱</div>
+                    <h3>Mobile View</h3>
+                    <p>Progressive Web App (PWA) for remote monitoring</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">☁️</div>
+                    <h3>Cloud Integration</h3>
+                    <p>Push analytics to AWS or Azure dashboards</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">🔉</div>
+                    <h3>Audio Alerts</h3>
+                    <p>Real-time audio/voice alerts for crowd overflow</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">📡</div>
+                    <h3>Multi-Camera Synchronization</h3>
+                    <p>Merge analytics across multiple feeds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Credits Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">🧾 Credits</h2>
+            <div class="credits-content">
+                <p class="credits-developer">Developed by <strong>Upparapalli Surya Sasikanth</strong></p>
+                <p class="credits-program">Under Infosys Certified Final Project – 2025</p>
+                <p class="credits-supervised">Supervised by the Infosys Training &amp; Evaluation Team</p>
+                <p class="credits-tagline">"CrowdCount — because every person counts, and every crowd matters." 💡</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CrowdCount</h3>
+                    <p>Smart Vision-Based System for Real-Time Crowd Monitoring</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#tech-stack">Tech Stack</a></li>
+                        <li><a href="#setup">Setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://github.com/yourusername/CrowdCount" target="_blank">GitHub Repository</a></li>
+                        <li><a href="mailto:surya@example.com">Contact Developer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CrowdCount Project. Infosys Certified Final Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
